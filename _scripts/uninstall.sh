@@ -2,4 +2,4 @@
 
 while read uninstaller; do
   bash "$uninstaller"
-done < <(find ${DOTFILES_ROOTS:-~/.dotfiles}/*/scripts -name uninstall.sh)
+done < <(find ${DOTFILES_ROOTS:-~/.dotbrick}/*/scripts -name uninstall.sh)

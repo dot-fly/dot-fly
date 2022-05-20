@@ -1,20 +1,20 @@
 #!/bin/bash
 
 while read -r dir; do
-  __CONFIG_FILE=${DOTFILES_ROOTS:-~/.dotfiles}/"$dir".txt
+  __CONFIG_FILE=${DOTFILES_ROOTS:-~/.dotbrick}/"$dir".txt
   if [[ -r "$__CONFIG_FILE" ]]; then
-    source ${DOTFILES_ROOTS:-~/.dotfiles}/_scripts/symlink-by-list.sh <"$__CONFIG_FILE"
+    source ${DOTFILES_ROOTS:-~/.dotbrick}/_scripts/symlink-by-list.sh <"$__CONFIG_FILE"
     continue
   fi
 
-  links_path=${DOTFILES_ROOTS:-~/.dotfiles}/"$dir"/links
+  links_path=${DOTFILES_ROOTS:-~/.dotbrick}/"$dir"/links
 
   if [[ ! -d "$links_path" ]]; then
     continue
   fi
 
   while read -r src; do
-    dst_dir="$(dirname "$HOME/${src#${DOTFILES_ROOTS:-~/.dotfiles}/*/links/}")"
+    dst_dir="$(dirname "$HOME/${src#${DOTFILES_ROOTS:-~/.dotbrick}/*/links/}")"
     dst_file="$(basename "$src")"
     dst="$dst_dir/$dst_file"
 

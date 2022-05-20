@@ -1,7 +1,7 @@
 #!/bin/bash
 
 while read src; do
-  dst_dir="$(dirname "$HOME/${src#${DOTFILES_ROOTS:-~/.dotfiles}/*/links/}")"
+  dst_dir="$(dirname "$HOME/${src#${DOTFILES_ROOTS:-~/.dotbrick}/*/links/}")"
   dst_file="$(basename ${src})"
   dst="$dst_dir/$dst_file"
 
@@ -11,4 +11,4 @@ while read src; do
     fi
     ln -s "$src" "$dst"
   fi
-done < <(find ${DOTFILES_ROOTS:-~/.dotfiles}/*/links -type f)
+done < <(find ${DOTFILES_ROOTS:-~/.dotbrick}/*/links -type f)

@@ -9,14 +9,14 @@ while read -r dir; do
     continue
   fi
 
-  __CONFIG_FILE=${DOTFILES_ROOTS:-~/.dotfiles}/"$dir".txt
+  __CONFIG_FILE=${DOTFILES_ROOTS:-~/.dotbrick}/"$dir".txt
   if [[ -r "$__CONFIG_FILE" ]]; then
     echo "$__CONFIG_FILE"
-    source ${DOTFILES_ROOTS:-~/.dotfiles}/_scripts/check-requirements.sh <"$__CONFIG_FILE"
+    source ${DOTFILES_ROOTS:-~/.dotbrick}/_scripts/check-requirements.sh <"$__CONFIG_FILE"
     continue
   fi
 
-  __DIR_PATH=${DOTFILES_ROOTS:-~/.dotfiles}/"$dir"
+  __DIR_PATH=${DOTFILES_ROOTS:-~/.dotbrick}/"$dir"
   if [[ -d "$__DIR_PATH" ]]; then
     __PKGS+=("$dir")
     __REQUIREMENTS_PATH="$__DIR_PATH"/requirements.txt
