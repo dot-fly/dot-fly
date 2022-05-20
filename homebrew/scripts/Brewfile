@@ -14,6 +14,8 @@ brew 'exa'
 # https://github.com/BurntSushi/ripgrep
 brew 'ripgrep'
 
+brew 'unzip'
+
 # A simple, fast and user-friendly alternative to 'find'
 # https://github.com/sharkdp/fd
 brew 'fd'

@@ -15,6 +15,7 @@ while read -r dir; do
       dst_file="$(basename "$src")"
       dst="$dst_dir/$dst_file"
 
+      unlink "$dst"
       if [[ ! -e "$dst" ]]; then
         if [[ ! -d "$dst_dir)" ]]; then
           mkdir -p "$dst_dir"
@@ -32,6 +33,7 @@ while read -r dir; do
       dst_file="$(basename "$src")"
       dst="$dst_dir/$dst_file"
 
+      unlink "$dst"
       if [[ ! -e "$dst" ]]; then
         if [[ ! -d "$dst_dir)" ]]; then
           mkdir -p "$dst_dir"
@@ -49,6 +51,7 @@ while read -r dir; do
       dst_file="$(basename "$src")"
       dst="$dst_dir/$dst_file"
 
+      unlink "$dst"
       if [[ ! -e "$dst" ]]; then
         if [[ ! -d "$dst_dir)" ]]; then
           mkdir -p "$dst_dir"
