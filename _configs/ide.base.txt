@@ -14,5 +14,6 @@ tmux
 vim
 nvim
 nvim.packer
+unzip
 nvim.lsp-installer
 editorconfig

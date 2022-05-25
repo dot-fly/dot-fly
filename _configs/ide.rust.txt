@@ -1,0 +1,4 @@
+_configs/archlinux.pkg-manager
+_configs/ide.base
+rust
+nvim.ide.rust

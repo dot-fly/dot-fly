@@ -1,1 +1,2 @@
 pacman|homebrew
+unzip
